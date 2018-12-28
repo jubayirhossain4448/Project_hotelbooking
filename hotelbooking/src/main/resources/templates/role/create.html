@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
+
+<head>
+    <title>Role Create</title>
+</head>
+<body>
+<div layout:fragment="custom-content">
+    <div class="row">
+
+
+        <div class="col-12 stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Add New Role</h4>
+
+                    <form class="forms-sample" th:object="${obj}" method="post"
+                          th:action="@{/role/create.jsf}">
+                        <div class="form-group row">
+                            <label for="rolename" class="col-sm-3 col-form-label">Role Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="rolename" th:field="*{rolename}" required
+                                       placeholder="Enter Role Name"> // here rolename is from role entity class
+
+                            </div>
+                        </div>
+
+
+                        <button class="btn btn-success mr-2 float-right">Submit</button>
+                        <button type="submit" class="btn btn-light mr-2 float-right">Reset</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

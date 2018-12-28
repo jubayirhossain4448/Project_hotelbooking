@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+    <body>
+
+        <nav class="sidebar sidebar-offcanvas" id="sidebar" th:fragment="side-navbar">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" th:href="@{/}">
+                        <span class="menu-title">Dashboard</span>
+                        <!--<span class="menu-sub-title">( 2 new updates )</span>-->
+                        <i class="mdi mdi-home menu-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#role" aria-expanded="false" aria-controls="role">
+                        <span class="menu-title">Role</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="role">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/role/create.jsf}" href="/role/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/role/list.jsf}" href="/role/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+
+    </body>
+
+</html>

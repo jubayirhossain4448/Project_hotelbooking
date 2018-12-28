@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>404</title>
+
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <link rel="stylesheet" href="/css/style.css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="/css/font-awesome.css" th:href="@{/css/font-awesome.css}"/>
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css" th:href="@{/css/perfect-scrollbar.min.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.0.39/css/materialdesignicons.css" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.0.39/css/materialdesignicons.css}">
+
+</head>
+
+<body>
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+      <div class="row">
+        <div class="content-wrapper full-page-wrapper d-flex align-items-center text-center error-page">
+          <div class="col-lg-6 mx-auto">
+            <h1 class="display-1 mb-0">404</h1>
+            <h2 class="mb-4">Page Not Found!</h2>
+            <p>You seem to be trying to find this way home</p>
+            <a class="btn btn-primary mt-5 btn-rounded btn-lg" href="/" th:href="@{/}">Back to home</a>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- row ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script th:src="@{/js/jquery-3.3.1.slim.min.js}" src="/js/jquery-3.3.1.slim.min.js"></script>
+  <script th:src="@{/js/popper.min.js}" src="/js/popper.min.js"></script>
+  <script th:src="@{/js/bootstrap.min.js}" src="/js/bootstrap.min.js"></script>
+  <script th:src="@{/js/perfect-scrollbar.jquery.min.js}" src="/js/perfect-scrollbar.jquery.min.js"></script>
+  <!-- endinject -->
+</body>
+
+</html>

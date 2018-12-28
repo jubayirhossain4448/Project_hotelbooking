@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <body>
+    <div style="margin-top: 63px;" class="container" th:fragment="under-nav">
+        <div class="row">
+
+            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                <div class="card-body">
+                    <a href="#" class="social-media-icon fab fa-github fa-1x"> Github</a>
+                    <a href="#" class="social-media-icon fab fa-linkedin-in fa-1x"> Linkedin</a>
+                    <a href="#" class="social-media-icon fab fab fa-hackerrank fa-1x"> Hacker Rank</a>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <div class="card-body">
+                    <p>Need A Developer? <a href="#">Hire Us.</a></p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="card-body">
+
+                    <a href="#" class="social-media-icon fab fa-java"> Java</a>
+                    <a href="#" class="social-media-icon fas fa-leaf"> Spring</a>
+                    <a href="#" class="social-media-icon fab fab fa-angular"> Angular</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!--Card-for Category start-->
+            <div id="header-left" class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <ul id="category" class="list-group box effect5">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="#"><i class="fas fa-leaf"></i> Spring Framework</a>
+                        <span class="badge badge-info badge-pill">12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="#"><i class="fab fa-envira"></i> Spring Boot</a>
+                        <span class="badge badge-info badge-pill">50</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="#"><i class="fas fa-exclamation"></i> Problem Solving</a>
+                        <span class="badge badge-info badge-pill">99</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="#"><i class="fas fa-shield-alt"></i> Application Security</a>
+                        <span class="badge badge-info badge-pill">99</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="#"><i class="fas fa-database"></i> Data JPA ~ Database</a>
+                        <span class="badge badge-info badge-pill">99</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="#"><i class="fab fa-angular"></i> Angular 6+</a>
+                        <span class="badge badge-info badge-pill">99</span>
+                    </li>
+                </ul>
+            </div>
+            <!--Card-for Category End-->
+            <!--Card-for BioGraphy start-->
+            <div id="header-middle" class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="card card-effect">
+                    <img class="card-img-top" th:src="@{/images/card2.jpg}" src="/images/card2.jpg" width="100%"
+                         height="290px"/>
+                </div>
+            </div>
+            <!--Card-for BioGraphy end-->
+            <!--Card-for Category start-->
+            <div id="header-right" class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="card card-effect">
+                    <div class="card-header">
+                        <h5 class="card-title">~Subscribe with us~</h5>
+                    </div>
+                    <div class="card-body input-group">
+
+
+                        <input type="email" value="" placeholder="E-mail address" name="EMAIL"
+                               class="required email form-control" id="mce-EMAIL">
+                        <span class="input-group-btn">
+                                    <input type="submit" class="button btn btn-info" value="Subscribe" name="subscribe"
+                                           id="mc-embedded-subscribe">
+                                </span>
+
+                    </div>
+                </div>
+                <div class="card card-effect">
+                    <div class="card-header">
+                        <h5 class="card-title">~Connect with us~</h5>
+                    </div>
+                    <div id="social" class="card-body">
+
+                        <a href="#" class="social-media-icon fab fa-facebook-f fa-1x"></a>~
+                        <a href="#" class="social-media-icon fab fa-twitter fa-1x"></a>~
+                        <a href="#" class="social-media-icon fab fa-google-plus-g fa-1x"></a>~
+                        <a href="#" class="social-media-icon fab fa-pinterest-p fa-1x"></a>~
+                        <a href="#" class="social-media-icon fab fa-youtube fa-1x"></a>
+                    </div>
+                </div>
+            </div>
+            <!--Card-for Category End-->
+        </div>
+    </div>
+
+    </body>
+
+</html>

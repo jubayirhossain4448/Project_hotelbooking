@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <!-- Required meta tags -->
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">Klaxxon Inc.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="Content-Security-Policy">
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <link rel="stylesheet" href="/css/style.css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="/css/font-awesome.css" th:href="@{/css/font-awesome.css}"/>
+    <link rel="stylesheet" href="css/css-stars.css" th:href="@{/css/css-stars.css}">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css" th:href="@{/css/bootstrap-datepicker.min.css}">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css" th:href="@{/css/perfect-scrollbar.min.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.0.39/css/materialdesignicons.css" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.0.39/css/materialdesignicons.css}">
+
+
+</head>
+<body>
+
+    <!--container-scroller start-->
+    <div class="container-scroller">
+        <div th:replace="~{fragments/navbar.html :: main-navbar}"></div>
+
+
+
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <div class="row row-offcanvas row-offcanvas-right">
+                <!-- partial:partials/_sidebar.html -->
+                <div th:replace="~{fragments/side-nav.html :: side-navbar}"></div>
+                <!-- partial -->
+                <div class="content-wrapper" layout:fragment="custom-content">
+                    <p>Your page content goes here</p>
+
+                </div>
+                <!-- content-wrapper ends -->
+
+            </div>
+            <!-- row-offcanvas ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+
+</div>
+<div id="foot" class="container-fluid">
+    <div th:replace="~{fragments/footer.html :: copyright}"></div>
+</div>
+
+
+</div><!--container-scroller start-->
+
+<script th:src="@{/js/jquery-3.3.1.slim.min.js}" src="/js/jquery-3.3.1.slim.min.js"></script>
+<script th:src="@{/js/popper.min.js}" src="/js/popper.min.js"></script>
+<script th:src="@{/js/bootstrap.min.js}" src="/js/bootstrap.min.js"></script>
+<script th:src="@{/js/perfect-scrollbar.jquery.min.js}" src="/js/perfect-scrollbar.jquery.min.js"></script>
+    <script th:src="@{/js/dashboard.js}" src="/js/dashboard.js"></script>
+    <script th:src="@{/js/mise.js}" src="/js/mise.js"></script>
+    <script type="text/javascript">
+        var IS_IPAD=navigator.userAgent.match(/iPad/i)!=null;
+        $("#header-bar").hide();
+        clicked="desktop";
+        var t= {
+                desktop:"100%",tabletlandscape:1040,tabletportrait:788,mobilelandscape:500,mobileportrait:340,placebo:0
+            }
+        ;
+        jQuery(".responsive a").on("click",function() {
+                var e=jQuery(this);
+                for (device in t) {
+                    if(e.hasClass(device)) {
+                        clicked=device;
+                        jQuery("#iframe").width(t[device]);
+                        if(clicked==device) {
+                            jQuery(".responsive a").removeClass("active");
+                            e.addClass("active")
+                        }
+                    }
+                }
+                return false
+            }
+        );
+        if(IS_IPAD) {
+            $("#iframe").css("padding-bottom","60px")
+        }
+    </script>
+</body>
+</html>
